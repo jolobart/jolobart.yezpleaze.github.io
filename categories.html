@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <title>YezPleaze!</title>
+</head>
+
+<body>
+<!--1st Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-darkblue">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="images/YEZPleaze_logo2_250x.png" alt=""></a>
+
+            <div class="navbar-toggler-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+    <!--Currency-->
+            <div class="dropdown">
+                <button class="btn btn-none dropdown-toggle text-light" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    PHP
+                </button>
+                <div class="dropdown-menu" saria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item bg-color" href="#">$ Dollar</a>
+                    <a class="dropdown-item" href="#">¥ Yen</a>
+                    <a class="dropdown-item" href="#">€ Euro</a>
+                    <a class="dropdown-item" href="#">₱ Peso</a>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><i class="fas fa-search fa-color" data-toggle="modal"
+                                data-target="#myModal"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user-alt fa-color" data-toggle="modal"
+                                data-target="#myModalAccount"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-cart-arrow-down fa-color" data-toggle="tooltip" title="Cart Quantity"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <p class="lead text-light money">₱ 0.00</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    <!-- Search Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal body -->
+                   <div class="modal-body">
+                       <form class="form-inline justify-content-center" action="">
+                            <input class="form-control" type="text" placeholder="Enter Keyword">
+                            <button class="btn btn-primary active btnsrch" type="submit">Search</button>
+                            <button type="button" class="btn btn-danger btnsrch" data-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Create account/ Log in Modal -->
+        <div class="modal" id="myModalAccount">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create An Account</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <form class="form">
+                            <label for="fname">First Name:</label>
+                            <input type="text" class="fname">
+                            <label for="lname">Last Name:</label>
+                            <input type="text" class="lname">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="emailadd">
+                            <label for="password">Password:</label>
+                            <input type="password" class="password">
+                            <label for="cnpass">Confirm Password:</label>
+                            <input type="password" class="cnpass">
+                            <button type="button" class="btn btn-primary active btnmargin float-right">Sign Up</button>
+                        </form>
+                    </div>
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Log In</h4>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                       <form class="form">
+                            <label for="email">Email Address:</label>
+                            <input type="email" class="emailadd">
+                            <label for="password">Password:</label>
+                            <input type="password" class="password">
+                        </form>
+
+                        <button type="button" class="btn btn-primary active btnmargin float-right">
+                            Log In
+                        </button>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!--2nd Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-darkblue-second fixed-top" id="navbar-second-id">
+        <div class="container ">
+            <div class="collapse navbar-collapse">
+                <div class="dropdown">
+                    <button class="btn btn-primary btn-lg dropdown-toggle" type="button" id="shop-by-category-btn"
+                        id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-list"></i>
+                        <span>Shop by Category</span>
+                    </button>
+
+                    <div class="dropdown-menu" id="dropdown-menu-sbc" aria-labelledby="dropdownMenu2">
+                        <a class="dropdown-item" href="accessories.html">Accessories</a>
+                        <a class="dropdown-item" href="bag.html">Bag</a>
+                        <a class="dropdown-item" href="wearable.html">Wearable</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class=" navbar-nav nav-item-li">
+                    <li class="nav-item active second-li-padding">
+                        <a class="nav-link text-light" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item second-li-padding">
+                        <a class="nav-link text-light" href="trackyourorder.html">Track your Order</a>
+                    </li>
+                    <li class="nav-item second-li-padding">
+                        <a class="nav-link text-light" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item second-li-padding nav-item-li">
+                        <a class="nav-link text-light" href="contactus.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item second-li-padding nav-item-li d-lg-none">
+                        <a class="nav-link text-light " href="categories.html">Categories</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <div class="ml-auto">
+                  <a href="tel:89471888">
+                    <i class="fas fa-phone-alt telephone-number text-light"></i><span class="text-light">(02) 8497-1888</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<!-- Back to Top -->
+    <!--<a name="gettop"></a>
+
+    <a id="backbtn" href="#gettop" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a> -->
+
+    <section class="three ">
+      <h2 class="text-center ">Categories</h2>
+      <hr width="190px" class="margin-bottom">
+      <div class="container">
+        <div class="row">
+          
+          <div class=" margin-bottomimg col-sm-12 text-center col-lg-4 ">
+            <a href="accessories.html"><img class="productimg dim" src="https://cdn.shopify.com/s/files/1/0122/6437/4336/products/Vintage_Leaf_Ear_Cuff3_720x.png?v=1545819929" alt=""></a>
+            <a class="nav-link sticky" href="#"><i class="fas fa-heart fa-color"></i></a>
+            <p class="font-weight-bold">Accessories</p>
+            
+          </div>
+          <div class=" margin-bottomimg col-sm-12 text-center col-lg-4">
+            <a href="bag.html"><img class="productimg dim" src="https://cdn.shopify.com/s/files/1/0122/6437/4336/products/Korean_Style_Crossbody_Bag_Black_720x.png?v=1545982843" alt=""></a>
+            <a class="nav-link sticky" href="#"><i class="fas fa-heart fa-color"></i></a>
+            <p class="font-weight-bold">Bag</p>
+          </div>
+         <div class=" margin-bottomimg col-sm-12 text-center col-lg-4">
+           <a href="wearable.html">
+             
+             <img class="productimg dim" src="https://cdn.shopify.com/s/files/1/0122/6437/4336/products/dog_hoodie1_540x.png?v=1546749798" alt=""></a>
+           <a class="nav-link sticky" href="#"><i class="fas fa-heart fa-color"></i></a>
+           <p class="font-weight-bold">Wearable</p>
+           
+         </div>
+        </div>
+      </div>
+    </section>
+
+<!--Newsletter-->
+    <section class="six shadow mb-5 bg-white rounded pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 class="col-lg-12  text-center newsletter">Subscribe to our newsletter</h2>
+                    <hr width="415px">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <p class="lead text-center col-lg-12">
+                        Sign up and get exclusive promos and discounts up to 80% OFF.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row margnauto justify-content-center">
+                <div class="col-lg-6 col-sm-12">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="email address" aria-label="" aria-describedby="basic-addon1">
+                        <div class="input-group-append">
+                          <button class="btn btn-success" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- footer -->
+    <footer class="bg-darkblue pt-5 footercenter">
+        <div class="container">
+            <div class="row ">
+                <div class=" col-sm-12 col-lg-4">
+                    <a class="footer-brand" href="index.html">
+                        <img src="images/YEZPleaze_logo2_250x.png" alt="">
+                    </a>
+
+                    <ul class="list-unstyled text-white">
+                        <li>
+                            <p>Office: 972 Sylvan Street South Angelina, NL S0B2V9</p> 
+                        </li>
+
+                        <li>
+                            <p>Phone: (02) 8497-1888 / (062)109222</p> 
+                        </li>
+
+                        <li>
+                            <p>Email: yezpleaze@gmail.com</p>
+                        </li>
+                    </ul>     
+                </div>
+
+                <div class="col-sm-12 col-lg-4">
+                    <h3 class="text-white ">Quick Links</h3>
+                    <ul class="list-unstyled text-white">
+                        <li>
+                            <a href="allproduct.html" class="text-white qlink text-light">All Product</a>
+                        </li>
+                        <li>
+                            <a href="aboutus.html" class="text-white qlink text-light">About Us</a>
+                        </li>
+                        <li>
+                            <a href="contactus.html" class="text-white qlink text-light">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html" class="text-white qlink text-light">Privacy Policy</a>
+                        </li>
+                       <li>
+                            <a href="faq.html" class="text-white qlink text-light">FAQ's</a>
+                        </li>
+                        <li>
+                            <a href="news.html" class="text-white qlink text-light">News</a>
+                        </li>
+                        <li>
+                            <a href="tandc.html" class="text-white qlink text-light">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class=" col-lg-4">
+                    <h3 class="text-white">Connect with Us</h2>
+
+                    <ul class="d-flex footerul marginf">
+                        <li class="footer-item active footercenter">
+                            <a class="footer-link" href="https://www.facebook.com/"><i class="fab fa-facebook-square fa-color"></i></a>
+                        </li>
+
+                        <li class="footer-item active footermargin">
+                            <a class="footer-link" href="https://twitter.com/"><i class="fab fa-twitter fa-color" aria-hidden="true"></i></a>
+                        </li>
+
+                        <li class="footer-item active footermargin">
+                            <li class="footer-item active">
+                        <a class="footer-link" href="https://www.instagram.com/"><i class="fab fa-instagram fa-color"></i></a>
+                        </li>
+
+                        <li class="footer-item active footermargin d-sm-none d-lg-block">
+                            <a class="footer-link" href="#"><i class="fab fa-cc-mastercard fa-color fa-align-center "></i></a>
+                        </li>                                               
+                        
+                        <li class="footer-item active footermargin d-sm-none d-lg-block" >
+                            <a class="footer-link" href="#"><i class="fab fa-cc-visa fa-color"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <a href="index.html" class="text-white qlink text-light">© 2020, YEZPleaze!</a>
+                </div>
+
+
+ <!--
+                <div class="col-lg-6 d-sm-none d-lg-block">
+                    <ul class="list-unstyled d-flex ml-auto float-right ">  
+                        <li class="footer-item active footermargin ">
+                            <a class="footer-link" href="#"><i class="fab fa-cc-mastercard fa-color fa-align-center "></i></a>
+                        </li>                                               
+                        
+                        <li class="footer-item active footermargin " >
+                            <a class="footer-link" href="#"><i class="fab fa-cc-visa fa-color"></i></a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
